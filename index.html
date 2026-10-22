@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cherry: swipe your week into a grocery list</title>
+  <meta name="description" content="Tell Cherry your cravings and your budget, swipe the recipes you like, and get one grocery list already priced and sorted by aisle. Save recipes from TikTok, scan menus, check products.">
+  <meta name="theme-color" content="#F4EEE8">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:title" content="Cherry: swipe your week into a grocery list">
+  <meta property="og:description" content="Recipes you swipe, one grocery list priced and sorted by aisle.">
+  <meta property="og:image" content="assets/og.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="apple-itunes-app" content="app-id=6822337167">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Zalando+Sans+SemiExpanded:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <a class="nav__brand" href="#top" aria-label="Cherry, back to top">
+      <img src="assets/mascot.png" alt="" width="40" height="40">
+      <span class="nav__word">Cherry</span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn--ink btn--sm" href="https://apps.apple.com/app/id6822337167">Get the app</a>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero__pixels" data-pixels aria-hidden="true"></div>
+      <div class="hero__inner">
+        <h1 class="hero__title" data-split>
+          What should I cook this week? <em>Swipe.</em>
+        </h1>
+        <p class="hero__lead reveal" style="--d:.45s">
+          Tell Cherry your cravings and your budget, swipe the recipes you like,
+          and get one grocery list already priced and sorted by aisle.
+        </p>
+        <div class="hero__cta reveal" style="--d:.6s">
+          <a class="store" href="https://apps.apple.com/app/id6822337167" aria-label="Download on the App Store">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.28-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74s1.78.74 3 .72c1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.41-3.69zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg>
+            <span><small>Download on the</small>App Store</span>
+          </a>
+          <a class="link-arrow" href="#features">See what it does <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <!-- Il mazzo che si swipa da solo: è la funzione principale, quindi è l'eroe. -->
+      <div class="hero__stage reveal" style="--d:.75s">
+        <div class="phone phone--hero">
+          <div class="phone__notch"></div>
+          <div class="phone__screen deck" data-deck>
+            <div class="deck__top">
+              <span class="deck__eyebrow">This week</span>
+              <span class="deck__count"><b data-deck-kept>0</b> kept</span>
+            </div>
+            <div class="deck__cards" data-deck-cards></div>
+            <div class="deck__budget">
+              <div class="deck__budget-row"><span>Budget</span><span><b data-deck-spent>$0</b> of $60</span></div>
+              <div class="meter"><i data-deck-meter></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="float-chip float-chip--a" aria-hidden="true">🛒 Sorted by aisle</div>
+        <div class="float-chip float-chip--b" aria-hidden="true">♻️ Shared ingredients</div>
+      </div>
+    </section>
+
+    <!-- CUCINE -->
+    <section class="cuisines" aria-label="Cuisines in Cherry">
+      <p class="cuisines__label reveal">Eleven cuisines, built around how you eat</p>
+      <div class="marquee" data-marquee="left"><div class="marquee__track" data-marquee-track></div></div>
+      <div class="marquee" data-marquee="right"><div class="marquee__track" data-marquee-track></div></div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section class="problem">
+      <div class="problem__card reveal-card">
+        <div class="problem__head">
+          <h2 class="h2" data-split>Eating well rarely fails on willpower. It fails on logistics.</h2>
+          <p class="problem__lead reveal">The supermarket, the restaurant menu, and the recipe on TikTok that doesn’t fit how you eat. Cherry handles all three.</p>
+        </div>
+        <div class="problem__grid">
+          <figure class="scene reveal" style="--d:.05s">
+            <div class="scene__img"><img src="assets/scenes/grocery.jpg" alt="Someone lost in a supermarket aisle" loading="lazy"></div>
+            <figcaption><b>“What do I even buy?”</b>One list for the week, priced line by line.</figcaption>
+          </figure>
+          <figure class="scene reveal" style="--d:.15s">
+            <div class="scene__img"><img src="assets/scenes/menu.jpg" alt="Someone reading a long restaurant menu" loading="lazy"></div>
+            <figcaption><b>“What can I order here?”</b>Snap the menu, get your picks.</figcaption>
+          </figure>
+          <figure class="scene reveal" style="--d:.25s">
+            <div class="scene__img"><img src="assets/scenes/recipe.jpg" alt="Someone scrolling recipes on their phone" loading="lazy"></div>
+            <figcaption><b>“That recipe isn’t for me.”</b>Any recipe, adapted to you.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUNZIONI: telefono fisso a sinistra, i passi scorrono a destra -->
+    <section class="features" id="features">
+      <header class="section-head">
+        <h2 class="h1" data-split>One app for every food decision</h2>
+        <p class="section-head__lead reveal">From the swipe on the sofa to the last item in the basket. Scroll to see each part at work.</p>
+      </header>
+
+      <div class="features__wrap" data-features>
+        <div class="features__sticky">
+          <div class="phone phone--feature">
+            <div class="phone__notch"></div>
+            <div class="phone__screen" data-screens></div>
+          </div>
+        </div>
+
+        <ol class="features__list">
+          <li class="feature" data-feature="0">
+            <span class="feature__num">01</span>
+            <h3 class="feature__title">Swipe your week into a grocery list</h3>
+            <p>Pick the cuisines you’re craving, set a budget, and swipe. Recipes share ingredients so nothing rots in the fridge, and everything merges into one list, grouped by supermarket section, with an estimated price on every line.</p>
+            <p class="feature__note">Store out of something? Tap it and Cherry finds a substitute, then rewrites the recipes that used it.</p>
+            <div class="feature__inline" data-inline="0"></div>
+          </li>
+          <li class="feature" data-feature="1">
+            <span class="feature__num">02</span>
+            <h3 class="feature__title">Save any recipe from TikTok or Instagram</h3>
+            <p>Tap Share, pick Cherry, keep scrolling. The recipe lands in your inbox adapted to your diet and allergies: the original ingredient on the left, your swap on the right, with the reason for each.</p>
+            <p class="feature__note">Tap a swap to cycle alternatives. Any recipe page works too, just paste the link.</p>
+            <div class="feature__inline" data-inline="1"></div>
+          </li>
+          <li class="feature" data-feature="2">
+            <span class="feature__num">03</span>
+            <h3 class="feature__title">Scan the menu, know what to order</h3>
+            <p>Photograph the menu, up to six pages. Cherry reads it against your profile and splits it in two: dishes you can order as they are, and dishes that need one small change.</p>
+            <p class="feature__note">For those, you get the exact phrase to say to the waiter.</p>
+            <div class="feature__inline" data-inline="2"></div>
+          </li>
+          <li class="feature" data-feature="3">
+            <span class="feature__num">04</span>
+            <h3 class="feature__title">Check any product in the aisle</h3>
+            <p>Point the camera at a barcode and get a straight answer: it fits your diet or it doesn’t, and exactly which ingredient is the problem.</p>
+            <div class="feature__inline" data-inline="3"></div>
+          </li>
+          <li class="feature" data-feature="4">
+            <span class="feature__num">05</span>
+            <h3 class="feature__title">Shop together, live</h3>
+            <p>Share one list with your partner or flatmate. Every tick shows up on both phones the second it happens, and the list sits on your Lock Screen and Dynamic Island while you shop.</p>
+            <p class="feature__note">Your profile and your recipes stay private.</p>
+            <div class="feature__inline" data-inline="4"></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- COME FUNZIONA -->
+    <section class="how" id="how">
+      <header class="section-head">
+        <h2 class="h1" data-split>Five steps, then it runs itself</h2>
+      </header>
+      <ol class="steps" data-steps>
+        <li class="step"><span class="step__dot"></span><span class="step__n">1</span><h3>Take the taste quiz</h3><p>Two minutes, once. What you’d never eat, what you love, allergies, how you eat.</p></li>
+        <li class="step"><span class="step__dot"></span><span class="step__n">2</span><h3>Pick cravings and budget</h3><p>Choose the cuisines you feel like this week and how much you want to spend.</p></li>
+        <li class="step"><span class="step__dot"></span><span class="step__n">3</span><h3>Swipe</h3><p>Keep the recipes you actually want to eat. The budget meter fills as you go.</p></li>
+        <li class="step"><span class="step__dot"></span><span class="step__n">4</span><h3>Shop the list</h3><p>Sorted by aisle, priced line by line, ticking as you go.</p></li>
+        <li class="step"><span class="step__dot"></span><span class="step__n">5</span><h3>Next week, new menu</h3><p>A completely new set of recipes, still built on your profile.</p></li>
+        <span class="steps__line" aria-hidden="true"><i data-steps-line></i></span>
+      </ol>
+    </section>
+
+    <!-- NUMERI: solo cose vere del prodotto, niente utenti gonfiati -->
+    <section class="numbers">
+      <header class="section-head">
+        <h2 class="h1" data-split>Cherry in numbers</h2>
+        <p class="section-head__lead reveal">Small numbers, on purpose. Less time planning, less food in the bin.</p>
+      </header>
+      <ul class="numbers__grid">
+        <li class="num reveal"><h3><span data-count="2">0</span><small>min</small></h3><p>to set up your taste profile. Once.</p></li>
+        <li class="num reveal" style="--d:.08s"><h3><span data-count="1">0</span></h3><p>grocery list for the whole week, sorted by aisle.</p></li>
+        <li class="num reveal" style="--d:.16s"><h3><span data-count="11">0</span></h3><p>cuisines, from Italian and Indian to Korean and Mexican.</p></li>
+        <li class="num reveal" style="--d:.24s"><h3><span data-count="6">0</span></h3><p>languages for recipes, swaps and menu verdicts.</p></li>
+      </ul>
+    </section>
+
+    <!-- PER CHI -->
+    <section class="who">
+      <header class="section-head">
+        <h2 class="h1" data-split>Who it’s for</h2>
+      </header>
+      <ul class="who__grid">
+        <li class="who__card reveal"><span class="who__emoji" aria-hidden="true">🍝</span><p>Anyone tired of cooking the same six dinners.</p></li>
+        <li class="who__card reveal" style="--d:.08s"><span class="who__emoji" aria-hidden="true">🥬</span><p>People who want to stop wasting food and money at the supermarket.</p></li>
+        <li class="who__card reveal" style="--d:.16s"><span class="who__emoji" aria-hidden="true">🥗</span><p>Households where everyone eats a little differently, from omnivore to vegan.</p></li>
+        <li class="who__card reveal" style="--d:.24s"><span class="who__emoji" aria-hidden="true">🧺</span><p>Couples and flatmates who shop together.</p></li>
+      </ul>
+    </section>
+
+    <!-- CHIUSURA -->
+    <section class="closer">
+      <div class="closer__inner">
+        <img class="closer__mascot" src="assets/mascot.png" alt="" width="180" height="180" loading="lazy">
+        <h2 class="closer__title" data-split>Cook what you love. Waste nothing.</h2>
+        <a class="store store--light" href="https://apps.apple.com/app/id6822337167" aria-label="Download on the App Store">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.28-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74s1.78.74 3 .72c1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.41-3.69zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg>
+          <span><small>Download on the</small>App Store</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <header class="section-head section-head--left">
+        <h2 class="h1" data-split>FAQs</h2>
+        <p class="section-head__lead reveal">The questions people ask before they download.</p>
+      </header>
+      <ul class="faq__list" data-faq>
+        <li class="qa is-open">
+          <h3><button aria-expanded="true">Is Cherry free?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+          <div class="qa__body"><div><p>Cherry needs a paid subscription. Recipe generation, grocery lists, menu and product scans and social recipe saves are subscriber features. The price is shown in the app before you confirm anything, and you can cancel any time from your Apple ID settings.</p></div></div>
+        </li>
+        <li class="qa">
+          <h3><button aria-expanded="false">Does it work if I eat meat?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+          <div class="qa__body"><div><p>Yes. The quiz asks how you eat, from everything to pescatarian, vegetarian or vegan, and every recipe, swap and menu verdict follows that. Change your mind later and everything re-tunes.</p></div></div>
+        </li>
+        <li class="qa">
+          <h3><button aria-expanded="false">What about allergies?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+          <div class="qa__body"><div><p>Tell Cherry once and it keeps those ingredients out of every recipe and flags them on menus and labels. Label readings and menu verdicts are a guide, not medical advice: with an allergy, always confirm with the restaurant or the packaging.</p></div></div>
+        </li>
+        <li class="qa">
+          <h3><button aria-expanded="false">Which languages does it speak?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+          <div class="qa__body"><div><p>The app is in English. Recipes, swaps and menu verdicts can come in English, Italian, Spanish, French, German or Portuguese, chosen in Settings.</p></div></div>
+        </li>
+        <li class="qa">
+          <h3><button aria-expanded="false">How accurate are the prices?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+          <div class="qa__body"><div><p>They are estimates for a typical supermarket, good enough to plan a week and stay on budget. The real total depends on your store and on what you already have at home.</p></div></div>
+        </li>
+        <li class="qa">
+          <h3><button aria-expanded="false">Who sees my data on a shared list?<span class="qa__icon" aria-hidden="true"></span></button></h3>
+          <div class="qa__body"><div><p>Only the list is shared. Your profile, your quiz answers and your saved recipes stay private to you.</p></div></div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <a class="nav__brand" href="#top"><img src="assets/mascot.png" alt="" width="40" height="40"><span class="nav__word">Cherry</span></a>
+      <a class="store store--sm" href="https://apps.apple.com/app/id6822337167" aria-label="Download on the App Store">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.28-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74s1.78.74 3 .72c1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.41-3.69zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg>
+        <span><small>Download on the</small>App Store</span>
+      </a>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Cherry</span>
+      <nav aria-label="Legal">
+        <a href="https://hellovego.com/cherry/privacy">Privacy</a>
+        <a href="https://hellovego.com/cherry/terms">Terms</a>
+        <a href="mailto:support@hellovego.com">Support</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
