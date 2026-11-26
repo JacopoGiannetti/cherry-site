@@ -1,0 +1,1 @@
+import{U as t,V as o,s as r,W as s,m as e,r as n,X as a}from"./ConsentBanner.rJsIUohU.js";import{L as i}from"./home.hDNICrK-.js";import"./Scenes.Bitf-jUG.js";t();o();r("landing",void 0,{once:!0});s(document.getElementById("root")).render(e.jsxs(n.StrictMode,{children:[e.jsx(i,{}),e.jsx(a,{})]}));
