@@ -1,0 +1,1 @@
+import{X as t,Y as o,s as r,Z as s,m as e,r as n,$ as a}from"./ConsentBanner.8wE56-gI.js";import{L as i}from"./home.BZGUBKNJ.js";import"./Scenes.DLbQDtFR.js";t();o();r("landing",void 0,{once:!0});s(document.getElementById("root")).render(e.jsxs(n.StrictMode,{children:[e.jsx(i,{}),e.jsx(a,{})]}));
